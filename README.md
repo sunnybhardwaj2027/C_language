@@ -1,2 +1,2 @@
 # C_language
-a repo for c practice
+a repo for c practice.
