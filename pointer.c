@@ -425,4 +425,230 @@ int main()
     return 0;
 }
 */
+// Q12--Write a C program to find length of string using pointers
+/*
+#include <stdio.h>
 
+int main()
+{
+    char str[100];
+    char *ptr=str;
+
+    printf("Enter string: ");
+    scanf("%[^\n]",ptr);
+
+    int i=0;
+    int count=0;
+    while(*(ptr+i)!='\0'){
+        count++;
+        i++;
+    }
+    printf("length = %d",count);
+    return 0;
+}
+*/
+// Q13--Write a C program to copy one string to another using pointers
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str1[100];
+    char str2[100];
+    char *ptr1=str1;
+    char *ptr2=str2;
+
+    printf("Enter string: ");
+    scanf("%[^\n]",ptr1);
+
+    int i=0;
+    while(*(ptr1+i)!='\0'){
+        *(ptr2+i)=*(ptr1+i);
+        i++;
+    }
+    *(ptr2+i)='\0';
+
+    printf("str2 = %s",str2);
+    return 0;
+}
+*/
+
+// Q14--Write a C program to concatenate two strings using pointers
+/*
+#include <stdio.h>
+
+int main() {
+    char str1[100];
+    char str2[100];
+    char str3[200];
+
+    char *ptr1 = str1;
+    char *ptr2 = str2;
+    char *ptr3 = str3;
+
+    printf("Enter first string: ");
+    scanf("%[^\n]", ptr1);
+
+    getchar(); 
+
+    printf("Enter second string: ");
+    scanf("%[^\n]", ptr2);
+    
+    int i = 0, j = 0;
+    
+    while (*(ptr1 + i) != '\0') {
+        *(ptr3 + i) = *(ptr1 + i);
+        i++;
+    }
+
+    
+    while (*(ptr2 + j) != '\0') {
+        *(ptr3 + i) = *(ptr2 + j);
+        i++;
+        j++;
+    }
+
+    
+    *(ptr3 + i) = '\0';
+
+    printf("str3 = %s\n", str3);
+
+    return 0;
+}
+*/
+
+// Q15--Write a C program to compare two strings using pointers
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char str1[100];
+    char str2[100];
+
+    char *ptr1=str1;
+    char *ptr2=str2;
+
+    printf("Enter first string: ");
+    scanf("%[^\n]",ptr1);
+
+    getchar();
+
+    printf("Enter second string: ");
+    scanf("%[^\n]",ptr2);
+
+    int len1=strlen(str1);
+    int len2=strlen(str2);
+
+    int i=0,j=0;
+
+    if(len1>=len2){
+        while(*(ptr1+i)!='0'){
+            if(*(ptr1+i)==*(ptr2+i)){
+                i++;
+            }
+            else if(*(ptr1+i)>*(ptr2+i)){
+                printf("str1 is greater string");
+                break;
+            }
+            else{
+                printf("str2 is graeter string");
+                break;
+            }
+        }
+    }
+
+    else{
+        while(*(ptr2+i)!='0'){
+            if(*(ptr2+i)==*(ptr1+i)){
+                i++;
+            }
+            else if(*(ptr2+i)>*(ptr1+i)){
+                printf("str2 is greater string");
+                break;
+            }
+            else{
+                printf("str1 is graeter string");
+                break;
+            }
+        }
+    }
+
+
+
+    return 0;
+}
+*/
+
+// Q16--Write a C program to find reverse of a string using pointers
+/*
+#include <string.h>
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    char *ptr=str;
+
+    printf("Enter string: ");
+    scanf("%[^\n]",ptr);
+
+    char first, second;
+    int i=0;
+    int len=strlen(str);
+
+    while(i<len/2){
+        first=*(ptr+i);
+        second=*(ptr+len-i-1);
+        *(ptr+i)=second;
+        *(ptr+len-i-1)=first;
+        i++;
+    }
+
+    printf("reverse string : %s",str);
+
+    return 0;
+}
+*/
+
+// Q17--Write a C program to sort array using pointers.
+/*
+#include <stdio.h>
+
+int main()
+{
+    int num[100];
+    int n;
+
+    printf("size of array: ");
+    scanf("%d",&n);
+
+    printf("Original array: ");
+
+    for(int i=0;i<n;i++){
+        printf("%d index: ",i);
+        scanf("%d",&num[i]);
+    }
+
+    int i=0,j=0;
+    for(i=0;i<n;i++){
+        for(j=i+1;j<n;j++){
+            if(num[i]>num[j]){
+                int temp=num[i];
+                num[i]=num[j];
+                num[j]=temp;
+            }
+        }
+    }
+
+    printf("reverse_array: ");
+    for(int k=0;k<n;k++){
+        printf("%d\t",num[k]);
+    }
+
+    return 0;
+}
+*/
+// problem****
+// Q18--proble***
