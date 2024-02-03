@@ -650,5 +650,37 @@ int main()
     return 0;
 }
 */
-// problem****
-// Q18--proble***
+
+
+
+// Q18--Write a C program to return multiple value from function using pointers
+/*
+#include <stdio.h>
+
+void calculate(int a, int b, int *sum, int *substract, int *multiply);
+
+int main()
+{
+    int num1, num2;
+
+    printf("num1: ");
+    scanf("%d",&num1);
+
+    printf("num2: ");
+    scanf("%d",&num2);
+
+    int add, substract, multiply;
+
+    calculate(num1, num2, &add, &substract, &multiply);
+
+    printf("add = %d\nsubstract = %d\nmultiply = %d",add,substract,multiply);
+
+    return 0;
+}
+
+void calculate(int a, int b, int *sum, int *substract, int *multiply){
+    *sum=a+b;
+    *substract=a-b;
+    *multiply=a*b;
+}
+*/
