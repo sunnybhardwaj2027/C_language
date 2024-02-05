@@ -967,3 +967,91 @@ int main()
 */
 
 // Q21--Write a C program to left rotate an array.
+/*
+#include <stdio.h>
+
+void rotate_Left(int arr[],int size);
+
+int main()
+{
+    int arr[100], n, i, size;
+
+    printf("Enter size of the array : ");
+    scanf("%d",&size);
+
+    printf("Enter elements of the array: ");
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+
+    printf("input number of times array to roate : ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+    rotate_Left(arr,size);
+    }
+
+    printf("array after %d rotation: ",n);
+    for(i=0;i<size;i++){
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+}
+
+void rotate_Left(int arr[],int size){
+    int first=arr[0];
+
+    int i;
+
+    for(i=0;i<size-1;i++){
+        arr[i]=arr[i+1];
+    }
+
+    arr[size-1]=first;
+}
+*/
+
+// Q22--Write a C program to right rotate an array
+/*
+#include <stdio.h>
+
+void rotate_Right(int arr[],int size);
+
+int main()
+{
+    int arr[100], n, i, size;
+
+    printf("Enter size of the array : ");
+    scanf("%d",&size);
+
+    printf("Enter elements of the array: ");
+    for(i=0;i<size;i++){
+        scanf("%d",&arr[i]);
+    }
+
+    printf("input number of times array to roate : ");
+    scanf("%d",&n);
+
+    for(i=0;i<n;i++){
+    rotate_Right(arr,size);
+    }
+
+    printf("array after %d rotation: ",n);
+    for(i=0;i<size;i++){
+        printf("%d\t",arr[i]);
+    }
+    return 0;
+}
+
+void rotate_Right(int arr[],int size){
+    int last=arr[size-1];
+
+    int i;
+
+    for(i=size-1;i>=1;i--){
+        arr[i]=arr[i-1];
+    }
+
+    arr[0]=last;
+}
+*/
