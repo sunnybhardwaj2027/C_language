@@ -619,66 +619,114 @@ int main() {
 */
 
 // Q20--Write a C program to count frequency of each character in a string
-
-// #include <stdio.h>
-
-// int main()
-// {
-//     char str[100];
-//     int occurance[100];
-
-//     printf("Enter string: ");
-//     scanf("%[^\n]",str);
-
-//     int i=0;
-//     int j, count;
-//     for(i=0;str[i]!='\0';i++){
-//         count=0;
-//         j=0;
-//         for(j=0;str[j]!='\0';j++){
-//             if(str[i]==str[j]){
-//                 count++;
-//             }
-//         } 
-//         occurance[i]=count;
-//            }
-
-//     occurance[i]='\0';
-//     for(int i=0;str[i]!='\0';i++){
-//         printf("'%c' has %d occurence\n",str[i],occurance[i]);
-//     }
-//     return 0;
-// }
 /*
 #include <stdio.h>
+#include <string.h>
+
+int main()
+{
+    char str[100];
+    char *ptr=str;
+    int freq[100]={0};
+    int count, i, size, j;
+
+    printf("Enter string: ");
+    scanf("%[^\n]",ptr);
+
+    size=strlen(str);
+
+    for(i=0;str[i]!='\0';i++){
+        count=1;
+        for(j=i+1;str[j]!='\0';j++){
+            if(str[j]==str[i]){
+                count++;
+                freq[j]=0;
+            }
+        }
+
+        if(freq[i]!=0){
+            freq[i]=count;
+        }
+    }
+
+    for(i=0;i<size;i++){
+        if(freq[i]!=0){
+            printf("'%c' has %d occurence\n",str[i],freq[i]);
+        }
+    }
+    
+    return 0;
+}
+*/
+/*
+#include <stdio.h>
+#include <string.h>
 
 int main() {
     char str[100];
-    int occurance[100];
+    int freq[100] = {0}; 
+    int count, i, size, j;
 
     printf("Enter string: ");
     scanf("%[^\n]", str);
 
-    int i = 0;
-    int j, count;
+    size = strlen(str);
+
     for (i = 0; str[i] != '\0'; i++) {
-        count = 0;
-        for (j = 0; str[j] != '\0'; j++) {
-            if (str[i] == str[j]) {
+        count = 1;
+        for (j = i + 1; str[j] != '\0'; j++) {
+            if (str[j] == str[i]) {
                 count++;
+                freq[j] = 0;
             }
         }
-        occurance[i] = count;
+
+        if (freq[i] != 0) {
+            freq[i] = count;
+        }
     }
 
-    occurance[i] = '\0'; // Terminating the occurance array
-
-    for (int k = 0; str[k] != '\0'; k++) {
-        printf("'%c' has %d occurrence(s)\n", str[k], occurance[k]);
+    printf("Character frequencies:\n");
+    for (i = 0; i < size; i++) {
+        if (freq[i] != 0) {
+            printf("'%c' has %d occurrence\n", str[i], freq[i]);
+        }
     }
 
     return 0;
 }
 */
+// Q21--Write a C program to remove first occurrence of a character from string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    char remove;
+
+    printf("input string: ");
+    scanf("%[^\n]",str);
+
+    getchar();
+
+    printf("input character to remove: ");
+    scanf("%c",&remove);
+
+    int i;
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==remove){
+            for(i;str[i]!='\0';i++){
+                str[i]=str[i+1];
+            }
+        }
+    }
+
+    printf("string after removing that charcter: %s",str);
+
+    return 0;
+}
+*/
+
 
 
