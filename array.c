@@ -887,12 +887,12 @@ int main()
 */
 
 // Q20--Write a C program to sort even and odd elements of array separately
-
+/*
 #include <stdio.h>
 
 int main()
 {
-    int arr[100], Odd[100], Even[100], size, i;
+    int arr[100], Odd[100], Even[100], size, i, j;
 
     printf("Enter size of the array: ");
     scanf("%d",&size);
@@ -925,6 +925,45 @@ int main()
             printf("%d\t",Odd[i]);
         }
     }
+
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(Even[j]>Even[i]){
+                int temp = Even[i];
+                Even[i]=Even[j];
+                Even[j]=temp;
+            }
+        }
+    }
+    printf("\n");
+    printf("sorted Even numbers:\t");
+    for(i=0;i<size;i++){
+        if(Even[i]!=-1){
+            printf("%d\t",Even[i]);
+        }
+    }
+
+    for(i=0;i<size;i++){
+        for(j=i+1;j<size;j++){
+            if(Odd[j]>Odd[i]){
+                int temp = Odd[i];
+                Odd[i]=Odd[j];
+                Odd[j]=temp;
+            }
+        }
+    }
+
+    printf("\n");
+    printf("sorted Odd numbers:\t");
+    for(i=0;i<size;i++){
+        if(Odd[i]!=-1){
+            printf("%d\t",Odd[i]);
+        }
+    }
     
     return 0;
 }
+
+*/
+
+// Q21--Write a C program to left rotate an array.
