@@ -643,3 +643,19 @@ int main()
     return 0;
 }
 */
+
+// Q20-half diamond star pattern
+
+#include <stdio.h>
+
+int main()
+{
+    int rows, columns, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    columns=1;
+    for
+    return 0;
+}
