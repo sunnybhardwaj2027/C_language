@@ -645,17 +645,331 @@ int main()
 */
 
 // Q20-half diamond star pattern
-
+/*
+*
+**
+***
+****
+*****
+****
+***
+**
+*
+*/
+/*
 #include <stdio.h>
 
 int main()
 {
-    int rows, columns, i, j;
+    int rows, column, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d", &rows);
+
+    column=1;
+
+    for(i=1;i<2*rows;i++){
+        for(j=1;j<=column;j++){
+            printf("*");
+        }
+
+        if(i<rows){
+            column++;
+        }
+
+        else{
+            column--;
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+// Q21--mirrored half diamond star pattern
+/*
+    *
+   **
+  ***
+ ****
+*****
+ ****
+  ***
+   **
+    *
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i, j;
 
     printf("Enter number of rows : ");
     scanf("%d",&rows);
 
-    columns=1;
-    for
+    column = 1;
+    for(i=1;i<2*rows;i++){
+        for(j=column;j<rows;j++){
+            printf(" ");
+        }
+
+        for(j=1;j<=column;j++){
+            printf("*");
+        }
+
+        if(i<rows){
+            column++;
+        }
+
+        else{
+            column--;
+        }
+
+        printf("\n");
+    }
+    
     return 0;
 }
+*/
+
+// Q22--diamond star pattern
+/*
+    *
+   ***
+  *****
+ *******
+*********
+ *******
+  *****
+   ***
+    *
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    column = 1;
+
+    for(i=1;i<2*rows;i++){
+        for(j=column;j<rows;j++){
+            printf(" ");
+        }
+
+        for(j=1;j <= (2 * column - 1);j++){
+            printf("*");
+        }
+
+        if(i<rows){
+            column++;
+        }
+        else{
+            column--;
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+// Q23--hollow diamond star pattern
+/*
+**********
+****  ****
+***    ***
+**      **
+*        *
+*        *
+**      **
+***    ***
+****  ****
+**********
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    for(i=1;i<=rows;i++){
+        for(j=i;j<=rows;j++){
+            printf("*");
+        }
+        for(j=1;j<i;j++){
+            printf(" ");
+        }
+
+        for(j=1;j<i;j++){
+            printf(" ");
+        }
+        for(j=i;j<=rows;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+
+    for(i=1;i<=rows;i++){
+        for(j=1;j<=i;j++){
+            printf("*");
+        }
+        for(j=i;j<rows;j++){
+            printf(" ");
+        }
+
+        for(j=i;j<rows;j++){
+            printf(" ");
+        }
+        for(j=1;j<=i;j++){
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+// Q24--right arrow star pattern
+/*
+*****
+  ****
+    ***
+      **
+        *
+      **
+    ***
+  ****
+*****
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    column=1;
+
+    for(i=1;i<2*rows;i++){
+        for(j=2;j<(2*column);j++){
+            printf(" ");
+        }
+
+        for(j=column;j<=rows;j++){
+            printf("*");
+        }
+
+        if(i<rows){
+            column++;
+        }
+        else{
+            column--;
+        }
+
+        printf("\n");
+        
+    }
+    return 0;
+}
+*/
+
+// Q25--left arrow star pattern
+/*
+    *****
+   ****
+  ***
+ **
+*
+ **
+  ***
+   ****
+    *****
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    column=1;
+
+    for(i=1;i<2*rows;i++){
+        for(j=column;j<rows;j++){
+            printf(" ");
+        }
+
+        for(j=column;j<=rows;j++){
+            printf("*");
+        }
+
+        if(i<rows){
+            column++;
+        }
+        else{
+            column--;
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+// Q26--plus star pattern
+/*
+    +
+    +
+    +
+    +
++++++++++
+    +
+    +
+    +
+    +
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    for(i=1;i<2*rows;i++){
+        if(i==rows){
+            for(j=1;j<2*rows;j++){
+                printf("+");
+            }
+        }
+        else{
+            for(j=1;j<rows;j++){
+                printf(" ");
+            }
+            printf("+");
+        }
+
+        printf("\n");
+    }
+    return 0;
+}
+*/
