@@ -728,5 +728,265 @@ int main()
 }
 */
 
+// Q22--Write a C program to remove last occurrence of a character from string.
+/*
+#include <stdio.h>
 
+int main()
+{
+    char str[100], ch;
+    int index, i;
 
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    getchar();
+
+    printf("Enter charcter that you want to remove : ");
+    scanf("%c",&ch);
+
+    index=-1;
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==ch){
+            index=i;
+        }
+    }
+
+    for(i=index;str[i]!='\0';i++){
+        str[i]=str[i+1];
+    }
+    str[i]='\0';
+
+    printf("%s",str);
+    
+    return 0;
+}
+*/
+
+// Q23--Write a C program to remove all occurrences of a character from string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100], ch;
+    int index, i, j;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    getchar();
+
+    printf("enter character : ");
+    scanf("%c",&ch);
+
+    index=-1;
+
+    for(i=0;str[i]!='\0';i++){
+        for(j=i;str[j]!='\0';j++){
+            if(str[j]==ch){
+                index=j;
+                for(j=index;str[j]!='\0';j++){
+                    str[j]=str[j+1];
+                }
+                str[j]='\0';
+            }
+        }
+    }
+
+    printf("%s",str);
+    return 0;
+}
+*/
+
+// Q24--Write a C program to remove all repeated characters from a given string.
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    int index, i, j, k;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    index=-1;
+
+    for(i=0;str[i]!='\0';i++){
+        for(j=i+1;str[j]!='\0';j++){
+            if(str[j]==str[i]){
+                index=j;
+                for(k=index;str[k]!='\0';k++){
+                    str[k]=str[k+1];
+                }
+                str[k]='\0';
+            }
+        }
+    }
+
+    printf("%s",str);
+    return 0;
+}
+*/
+
+// Q25--Write a C program to replace first occurrence of a character with another in a string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100];
+    int i;
+    char ch1, ch2;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    getchar();
+
+    printf("ch1 : ");
+    scanf("%c",&ch1);
+
+    getchar();
+
+    printf("ch2 : ");
+    scanf("%c",&ch2);
+
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==ch1){
+            str[i]=ch2;
+            break;
+        }
+    }
+
+    printf("string after replace '%c' with '%c' : %s",ch1,ch2,str);
+
+    
+    return 0;
+}
+*/
+
+// Q26--Write a C program to replace last occurrence of a character with another in a string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100], ch1, ch2;
+    int index, i;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    getchar();
+
+    printf("ch1 : ");
+    scanf("%c",&ch1);
+
+    getchar();
+
+    printf("ch2 : ");
+    scanf("%c",&ch2);
+
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==ch1){
+            index=i;
+        }
+    }
+    str[index]=ch2;
+
+    printf("string after replacing last occurence of '%c' with '%c' : %s",ch1,ch2,str);
+    return 0;
+}
+*/
+
+// Q27--Write a C program to replace all occurrences of a character with another in a string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100], ch1, ch2;
+    int i;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",str);
+
+    getchar();
+
+    printf("ch1 : ");
+    scanf("%c",&ch1);
+
+    getchar();
+
+    printf("ch2 : ");
+    scanf("%c",&ch2);
+
+    for(i=0;str[i]!='\0';i++){
+        if(str[i]==ch1){
+            str[i]=ch2;
+        }
+    }
+
+    printf("string after replacing all the occirence of '%c' with '%c' : %s",ch1,ch2,str);
+    return 0;
+}
+*/
+
+// Q28--Write a C program to find first occurrence of a word in a given string
+/*
+#include <stdio.h>
+
+int main()
+{
+    char str[100], word[100];
+    int index,i,found;
+
+    printf("Enter string : ");
+    scanf("%[^\n]",&str);
+
+    getchar();
+
+    printf("Enter word: ");
+    scanf("%s",&word);
+
+    index=0;
+    while(str[index]!='\0'){
+        if(str[index]==word[0]){
+            found=1;
+            i=0;
+            while(word[i]!='\0'){
+                if(str[index+i]!=word[i]){
+                    found=0;
+                    break;
+                }
+                i++;
+            }
+        }
+
+        if(found==1){
+            break;
+        }
+        index++;
+    }
+
+    if(found==1){
+        printf("'%s' found at the index '%d'",word,index);
+    }
+    else{
+        printf("'%s' does not found in the string",word);
+    }
+    return 0;
+}
+*/
+
+// Q29--Write a C program to find last occurrence of a word in a given string
+
+#include <stdio.h>
+
+int main()
+{
+    
+    return 0;
+}
