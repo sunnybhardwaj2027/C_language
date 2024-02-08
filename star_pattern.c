@@ -973,3 +973,122 @@ int main()
     return 0;
 }
 */
+
+// Q27--X star pattern
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, column, i , j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    column=1;
+
+    for(i=1;i<2*rows;i++){
+        for(j=1;j<column;j++){
+            printf(" ");
+        }
+        printf("*");
+
+        for(j=column;j<rows;j++){
+            printf(" ");
+        }
+
+        for(j=column;j<rows;j++){
+            printf(" ");
+        }
+        printf("*");
+
+        if(i<rows){
+            column++;
+        }
+        else{
+            column--;
+        }
+
+        printf("\n");
+
+    }
+    return 0;
+}
+*/
+/*
+*       *
+ *     *
+  *   *
+   * *
+    *
+   * *
+  *   *
+ *     *
+*       *
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, i , j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    for(i=1;i<2*rows;i++){
+        for(j=1;j<2*rows;j++){
+            if(j==i || j==(2*rows-i)){
+                printf("*");
+            }else{
+                printf(" ");
+            }
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
+// Q28--Eight star pattern
+/*
+ ***
+*   *
+*   *
+*   *
+ ***
+*   *
+*   *
+*   *
+ ***
+*/
+/*
+#include <stdio.h>
+
+int main()
+{
+    int rows, i, j;
+
+    printf("Enter number of rows : ");
+    scanf("%d",&rows);
+
+    for(i=1;i<2*rows;i++){
+        if(i==1 || i==rows || i==(2*rows-1)){
+            printf(" ");
+            for(j=1;j<(rows-1);j++){
+                printf("*");
+            }
+        }
+        else{
+            printf("*");
+            for(j=1;j<(rows-1);j++){
+                printf(" ");
+            }
+            printf("*");
+        }
+        printf("\n");
+    }
+    return 0;
+}
+*/
+
